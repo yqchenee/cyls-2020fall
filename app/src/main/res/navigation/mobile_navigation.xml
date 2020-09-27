@@ -18,11 +18,6 @@
             android:name="username"
             app:argType="string"
             android:defaultValue="tyler" />
-        <action
-            android:id="@+id/action_navigation_home_pop"
-            app:destination="@id/login_register"
-            app:popUpTo="@id/navigation_home"
-            app:popUpToInclusive="true" />
     </fragment>
 
     <fragment
@@ -38,21 +33,9 @@
         android:name="com.example.cyls_2020fall.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
-    <navigation android:id="@+id/login_register"
-        app:startDestination="@id/loginFragment">
-        <fragment
-            android:id="@+id/loginFragment"
-            android:name="com.example.cyls_2020fall.ui.login.LoginFragment"
-            android:label="fragment_login"
-            tools:layout="@layout/fragment_login">
-            <action
-                android:id="@+id/action_login_to_home"
-                app:destination="@id/navigation_home" />
-        </fragment>
-    </navigation>
     <fragment
-        android:id="@+id/themeColorsFragment"
-        android:name="com.example.cyls_2020fall.ThemeColorsFragment"
-        android:label="fragment_theme_colors"
-        tools:layout="@layout/fragment_theme_colors" />
+        android:id="@+id/theme_color"
+        android:name="com.example.cyls_2020fall.ui.themecolors.Theme_color"
+        android:label="theme_color_fragment"
+        tools:layout="@layout/theme_color_fragment" />
 </navigation>
