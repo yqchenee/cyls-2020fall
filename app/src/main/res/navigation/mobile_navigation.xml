@@ -13,7 +13,7 @@
 
         <action
             android:id="@+id/action_navigation_home_to_navigation_dashboard"
-            app:destination="@id/navigation_dashboard" />
+            app:destination="@id/navigation_friends" />
         <argument
             android:name="username"
             app:argType="string"
@@ -21,18 +21,17 @@
     </fragment>
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.example.cyls_2020fall.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard">
-    </fragment>
+        android:id="@+id/navigation_friends"
+        android:name="com.example.cyls_2020fall.ui.dashboard.SettingFragment"
+        android:label="@string/title_friends"
+        tools:layout="@layout/fragment_setting"></fragment>
 
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.cyls_2020fall.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_setting"
+        android:name="com.example.cyls_2020fall.ui.notifications.FriendsFragment"
+        android:label="@string/title_setting"
+        tools:layout="@layout/fragment_friends" />
     <fragment
         android:id="@+id/theme_color"
         android:name="com.example.cyls_2020fall.ui.themecolors.Theme_color"

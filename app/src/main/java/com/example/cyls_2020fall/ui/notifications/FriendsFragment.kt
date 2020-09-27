@@ -1,4 +1,4 @@
-package com.example.cyls_2020fall.ui.dashboard
+package com.example.cyls_2020fall.ui.notifications
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,20 +10,20 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.cyls_2020fall.R
 
-class DashboardFragment : Fragment() {
+class FriendsFragment : Fragment() {
 
-    private lateinit var dashboardViewModel: DashboardViewModel
+    private lateinit var friendsViewModel: FriendsViewModel
 
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        dashboardViewModel =
-                ViewModelProviders.of(this).get(DashboardViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_dashboard, container, false)
-        val textView: TextView = root.findViewById(R.id.text_dashboard)
-        dashboardViewModel.text.observe(viewLifecycleOwner, Observer {
+        friendsViewModel =
+                ViewModelProviders.of(this).get(FriendsViewModel::class.java)
+        val root = inflater.inflate(R.layout.fragment_friends, container, false)
+        val textView: TextView = root.findViewById(R.id.text_notifications)
+        friendsViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root
