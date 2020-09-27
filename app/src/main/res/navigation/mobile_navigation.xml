@@ -10,32 +10,32 @@
         android:name="com.example.cyls_2020fall.ui.home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" >
+
         <action
             android:id="@+id/action_navigation_home_to_navigation_dashboard"
             app:destination="@id/navigation_dashboard" />
+        <argument
+            android:name="username"
+            app:argType="string"
+            android:defaultValue="tyler" />
     </fragment>
 
     <fragment
         android:id="@+id/navigation_dashboard"
         android:name="com.example.cyls_2020fall.ui.dashboard.DashboardFragment"
         android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_dashboard">
+    </fragment>
+
 
     <fragment
         android:id="@+id/navigation_notifications"
         android:name="com.example.cyls_2020fall.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
-    <navigation android:id="@+id/login_register"
-        app:startDestination="@id/loginFragment">
-        <fragment
-            android:id="@+id/loginFragment"
-            android:name="com.example.cyls_2020fall.ui.login.LoginFragment"
-            android:label="fragment_login"
-            tools:layout="@layout/fragment_login">
-            <action
-                android:id="@+id/action_login_to_home"
-                app:destination="@id/navigation_home" />
-        </fragment>
-    </navigation>
+    <fragment
+        android:id="@+id/theme_color"
+        android:name="com.example.cyls_2020fall.ui.themecolors.Theme_color"
+        android:label="theme_color_fragment"
+        tools:layout="@layout/theme_color_fragment" />
 </navigation>
